@@ -1,20 +1,21 @@
 # Use an official Python runtime as a parent image
-FROM python:3.11.1
+FROM python:3.11-slim
 
-# Set environment variables to prevent buffering and auto flush
-ENV PYTHONUNBUFFERED 1
+COPY ./app /app
+COPY ./requirements.txt /requirements.txt
 
-# Set the working directory inside the container
-WORKDIR /imagetotext
-
-# Copy the requirements file into the container at /app
-COPY requirements.txt /imagetotext//
-
-# Install any needed packages specified in requirements.txt
-RUN pip install -r requirements.txt
-
-# Copy the entire project directory into the container at /app
-COPY . /imagetotext/
+RUN apt-get update && \
+    apt-get install -y \
+        build-essential \
+        python3-dev \
+        python3-setuptools \
+        tesseract-ocr \
+        make \
+        gcc \
+    && python3 -m pip install -r requirements.txt \
+    && apt-get remove -y --purge make gcc build-essential \
+    && apt-get autoremove -y \
+    && rm -rf /var/lib/apt/lists/*
 
 # Expose the port that the FastAPI application will run on (change to the port used in your FastAPI app)
 EXPOSE 8000
