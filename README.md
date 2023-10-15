@@ -1,5 +1,5 @@
 # ImageToText
-Use images to extract text from it usinf FastAPI
+Use images to extract text from it using FastAPI
 
 # Image to Text Microservice
 
@@ -26,18 +26,15 @@ The API endpoints are documented using Swagger UI. You can explore and test the 
 
 To run this microservice locally for development or testing, you can follow these steps:
 
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/raaz252/ImageToText.git
-   cd ImageToText
-   ```
+### Clone the repository:
+```bash
+git clone https://github.com/raaz252/ImageToText.git
+cd ImageToText
+```
 # Pytest for FastAPI Image-to-Text Microservice
-
 This pytest suite is designed to test a FastAPI microservice that converts images to text. The microservice is expected to handle file uploads, perform OCR (Optical Character Recognition), and provide echo functionality for image validation.
 
 ## Test Setup
-
 To run these tests, you need to have Python and pytest installed. You can install the required dependencies using `pip`:
 
 ```bash
