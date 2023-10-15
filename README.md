@@ -1,7 +1,6 @@
 # ImageToText
 Use images to extract text from it usinf FastAPI
 
-```
 # Image to Text Microservice
 
 A FastAPI microservice for extracting  text from images.It is deployed at [https://imagetotext-042d.onrender.com/](https://imagetotext-042d.onrender.com/).
@@ -27,7 +26,7 @@ The API endpoints are documented using Swagger UI. You can explore and test the 
 
 To run this microservice locally for development or testing, you can follow these steps:
 
-1. Clone the repository:
+1. **Clone the repository:**
 
    ```bash
    git clone https://github.com/raaz252/ImageToText.git
