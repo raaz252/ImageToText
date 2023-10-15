@@ -6,15 +6,15 @@ Use images to extract text from it usinf FastAPI
 A FastAPI microservice for extracting  text from images.It is deployed at [https://imagetotext-042d.onrender.com/](https://imagetotext-042d.onrender.com/).
 
 ## Endpoints
-1. **GET:Home View**
+### `GET:Home View`
 The normal home page with some changes and response as an HTML template .
 Endpoint:`https://imagetotext-042d.onrender.com/`
 
-2.**POST:Image Prediction View**
+### `POST:Image Prediction View`
 This endpoint takes a photo as input and provides the extracted text as results.
 Endpoint: `https://imagetotext-042d.onrender.com/`
 
-3.**POST:Img-Echo View**
+### `POST:Img-Echo View`
 This endpoint is used for validation testing using pytest. It echoes back the uploaded image for validation purposes.
 Endpoint: `https://imagetotext-042d.onrender.com/img-echo`
 
@@ -41,7 +41,7 @@ This pytest suite is designed to test a FastAPI microservice that converts image
 To run these tests, you need to have Python and pytest installed. You can install the required dependencies using `pip`:
 
 ```bash
-pip install pytest fastapi pytest-cov Pillow
+pip install -r requirements.txt
 ```
 **The tests are designed to work with the provided FastAPI application located in app.main. The BASE_DIR variable is expected to point to the base directory of your project, and the TestClient class from fastapi.testclient is used for simulating HTTP requests.**
 
